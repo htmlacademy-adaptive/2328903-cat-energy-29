@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Лев Чернин](https://up.htmlacademy.ru/adaptive/29/user/2328903).
-* Наставник: [Алиса Пепел](https://htmlacademy.ru/profile/id615601).
+* Наставник:[Алиса Пепел](https://htmlacademy.ru/profile/id615601).
 
 ---
 
