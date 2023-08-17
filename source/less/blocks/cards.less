@@ -1,0 +1,77 @@
+.cards__item {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  row-gap: 13px;
+  align-items: center;
+  justify-items: center;
+  padding: 11px 0 14px;
+
+  &--more {
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: top 17px center;
+    row-gap: 0;
+    padding-top: 70px;
+
+    .cards__title {
+      grid-column: ~"1 / -1";
+      margin-bottom: 8px;
+      max-width: 205px;
+      color: #111111;
+    }
+
+    .cards__description {
+      display: block;
+      grid-column: ~"1 / -1";
+      max-width: 220px;
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.cards__image {
+  display: block;
+}
+
+.cards__text {
+  padding-bottom: 9px;
+  justify-self: start;
+  width: 100%;
+}
+
+.cards__title {
+  font-family: "Oswald", serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222222;
+  margin: 0;
+  margin-bottom: 14px;
+  max-width: 80px;
+}
+
+.cards__description {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cards__cost {
+  margin: 0;
+  justify-self: end;
+}
+
+.cards__link {
+  grid-column: ~"1 / -1";
+  text-align: center;
+  width: 100%;
+
+  &--more {
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #444444;
+  }
+}
