@@ -21,10 +21,11 @@
       </button>
       <ul class="main-nav__list main-nav__list--close">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--index main-nav__link--current" href="index.html">Главная</a>
+          <a class="main-nav__link main-nav__link--index" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--index" href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link main-nav__link--index main-nav__link--current" href="catalog.html">Каталог
+            продукции</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--index" href="form.html">Подбор программы</a>
@@ -33,8 +34,8 @@
     </nav>
   </header>
 
-  <main class="main-container">
-    <h1 class="main-container__title">Каталог продукции</h1>
+  <main class="catalog-container">
+    <h1 class="catalog-container__title">Каталог продукции</h1>
 
     <section class="products">
       <div class="products__wrapper">
@@ -153,57 +154,59 @@
       </div>
     </section>
 
-    <section class="other-products">
-      <div class="other-products__wrapper">
-        <h2 class="other-products__title">Дополнительные товары</h2>
-        <ul class="other-products__list list">
-          <li class="list__item">
-            <h3 class="list__title">Сахарозаменитель</h3>
-            <span class="list__description">1 упаковка (100 г)</span>
-            <span class="list__price">200 ₽</span>
-            <a class="list__link button" href="#">Заказать</a>
-          </li>
-          <li class="list__item">
-            <h3 class="list__title">Питьевая вода</h3>
-            <span class="list__description">5 литров</span>
-            <span class="list__price">50 ₽</span>
-            <a class="list__link button" href="#">Заказать</a>
-          </li>
-          <li class="list__item">
-            <h3 class="list__title">Молоко</h3>
-            <span class="list__description">1 литр</span>
-            <span class="list__price">100 ₽</span>
-            <a class="list__link button" href="#">Заказать</a>
-          </li>
-          <li class="list__item">
-            <h3 class="list__title">Витамины</h3>
-            <span class="list__description">1 упаковка (30 г)</span>
-            <span class="list__price">300 ₽</span>
-            <a class="list__link button" href="#">Заказать</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <div class="catalog-container__wrapper">
+      <section class="other-products">
+        <div class="other-products__wrapper">
+          <h2 class="other-products__title">Дополнительные товары</h2>
+          <ul class="other-products__list list">
+            <li class="list__item">
+              <h3 class="list__title">Сахарозаменитель</h3>
+              <span class="list__description">1 упаковка (100 г)</span>
+              <span class="list__price">200 ₽</span>
+              <a class="list__link button" href="#">Заказать</a>
+            </li>
+            <li class="list__item">
+              <h3 class="list__title">Питьевая вода</h3>
+              <span class="list__description">5 литров</span>
+              <span class="list__price">50 ₽</span>
+              <a class="list__link button" href="#">Заказать</a>
+            </li>
+            <li class="list__item">
+              <h3 class="list__title">Молоко</h3>
+              <span class="list__description">1 литр</span>
+              <span class="list__price">100 ₽</span>
+              <a class="list__link button" href="#">Заказать</a>
+            </li>
+            <li class="list__item">
+              <h3 class="list__title">Витамины</h3>
+              <span class="list__description">1 упаковка (30 г)</span>
+              <span class="list__price">300 ₽</span>
+              <a class="list__link button" href="#">Заказать</a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="present">
-      <h2 class="visually-hidden">Бонус</h2>
-      <p class="present__description">Закажите все и получите чехол для кота в подарок!</p>
-    </section>
+      <section class="present">
+        <h2 class="visually-hidden">Бонус</h2>
+        <p class="present__description">Закажите все и получите чехол для кота в подарок!</p>
+      </section>
+    </div>
 
-    <section class="contacts">
+    <section class="contacts contacts--catalog">
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты магазина Cat Energy</h2>
         <p class="contacts__lead">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
       </div>
-      <img class="contacts__img" src="img/map.png" width="320" height="362" alt="Карта с местом нахождения Cat Energy">
     </section>
   </main>
 
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo-link" href="#">
-        <img class="main-footer__logo-img" src="img/logo-caption.svg" width="128" height="24" alt="Логотип магазина Cat Energy">
+        <img class="main-footer__logo-img" src="img/logo-caption.svg" width="128" height="24"
+          alt="Логотип магазина Cat Energy">
       </a>
       <ul class="main-footer__social social">
         <li class="social__item">
@@ -222,7 +225,7 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer__academy">HTML Academy</a>
+      <a class="main-footer__academy" href="#">HTML Academy</a>
     </div>
   </footer>
 </body>

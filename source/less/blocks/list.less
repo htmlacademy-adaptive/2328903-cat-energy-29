@@ -1,12 +1,44 @@
 .list {
   display: grid;
   row-gap: 13px;
+
+  @media (min-width: @tablet-width) {
+    row-gap: 0;
+    border: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .list__item {
   display: grid;
-  grid-template-columns: repeat(2, 140px);
+  grid-template-columns: repeat(2, 1fr);
   padding-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 192px 132px;
+    padding: 25px 40px 28px;
+    row-gap: 25px;
+    border-bottom: 1px solid #cdcdcd;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 27px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 0 16px;
+    grid-template-columns: 1fr 245px 80px 245px;
+    align-items: center;
+
+    &:last-child {
+      padding-bottom: 17px;
+    }
+  }
 }
 
 .list__title {
@@ -18,20 +50,53 @@
   color: #222222;
   margin: 0;
   margin-bottom: 13px;
-  grid-column: ~"1 / -1";
+  grid-column: span 2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    grid-column: auto;
+    margin-bottom: 0;
+  }
 }
 
 .list__description {
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
 }
 
 .list__price {
   line-height: 14px;
-  justify-self: end;
+  text-align: end;
+
+  @media (min-width: @tablet-width) {
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
 }
 
 .list__link {
   margin-top: 15px;
   text-align: center;
   grid-column: ~"1 / -1";
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: auto;
+  }
 }

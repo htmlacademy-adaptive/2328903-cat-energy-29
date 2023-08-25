@@ -1,0 +1,29 @@
+.catalog-container__title {
+  padding: 5px 20px 20px;
+  font-family: "Oswald", serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 43px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 188px 110px 84px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.catalog-container__wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    padding: 76px 110px 87px;
+  }
+}

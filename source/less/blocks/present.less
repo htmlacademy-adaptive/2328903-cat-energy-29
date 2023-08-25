@@ -1,6 +1,15 @@
 .present {
   background-color: #ffffff;
   padding: 35px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-top: 116px;
+  }
 }
 
 .present__description {
@@ -13,4 +22,17 @@
   text-align: center;
   margin: 0;
   padding: 187px 61px 43px 58px;
+
+  @media (min-width: @tablet-width) {
+    padding: 71px 125px 69px 421px;
+    text-align: start;
+    background-position: center left 78px, center, center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 185px 40px 43px;
+    background-position: top 56px center, center, center;
+    text-align: center;
+    min-width: 241px;
+  }
 }
