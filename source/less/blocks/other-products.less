@@ -1,20 +1,45 @@
 .other-products {
   background-color: #ffffff;
   padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: span 3;
+    padding: 0;
+  }
 }
 
 .other-products__wrapper {
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .other-products__title {
-  color: #000000;
   font-family: "Oswald", serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  color: #000000;
   margin: 0;
   margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 79px;
+  }
 }
 
 .other-products__list {
@@ -22,4 +47,8 @@
   margin: 0;
   padding: 0;
   padding-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }

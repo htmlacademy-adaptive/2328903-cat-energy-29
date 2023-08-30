@@ -1,5 +1,14 @@
 .guide__wrapper {
+  margin: 0 auto;
   padding: 20px 20px 49px;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 105px 47px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px 69px;
+  }
 }
 
 .guide__title {
@@ -10,36 +19,98 @@
   color: #000000;
   margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .guide__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 37px;
+    column-gap: 135px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
 }
 
 .guide__item {
-  margin-bottom: 20px;
-  padding-left: 80px;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 
-  &--leaf {
+  &::before {
+    content: "";
+    min-width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 20px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-right: auto;
+      margin-bottom: 31px;
+      z-index: 1;
+    }
+  }
+
+  &--leaf::before {
     background-image: url("../img/leaf.svg");
   }
 
-  &--water {
+  &--water::before {
     background-image: url("../img/water.svg");
   }
 
-  &--food {
+  &--food::before {
     background-image: url("../img/food.svg");
   }
 
-  &--time {
+  &--time::before {
     background-image: url("../img/time.svg");
   }
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: wrap;
+    position: relative;
+    padding: 40px 0 57px;
+  }
+}
+
+.guide__description {
+  @media (min-width: @tablet-width) {
+    z-index: 1;
+  }
+}
+
+.guide__count {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    left: 113px;
+    font-family: "Oswald", serif;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
   }
 }
