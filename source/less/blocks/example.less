@@ -76,9 +76,10 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 179px 179px 1fr;
+    grid-template-columns: 162px 162px auto;
     margin-bottom: 104px;
     gap: 43px;
+    justify-content: stretch;
   }
 
   @media (min-width: @desktop-width) {
@@ -160,10 +161,22 @@
 
   @media (min-width: @desktop-width) {
     grid-column: ~"1 / -1";
-    text-align: start;
+    padding: 0;
+    display: flex;
   }
 }
 
+.example__price-count {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 63px;
+  }
+}
 
 .example__img {
   display: block;
