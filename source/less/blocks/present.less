@@ -1,41 +1,80 @@
 .present {
-  background-color: #ffffff;
-  padding: 35px 20px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/present-main.png");
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/present-main.png");
   background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (min-width: @tablet-width) {
-    padding: 0 30px 75px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-    margin-top: 116px;
-  }
+  background-size: 100% auto;
+  background-position: center;
+  padding-top: 60px;
+  padding-bottom: 43px;
+  margin: auto;
+  margin-bottom: 28px;
 }
 
 .present__description {
-  background-image: url("../img/present.svg");
-  background-repeat: no-repeat;
-  background-position: top 59px center, center, center;
-  font-size: 16px;
-  line-height: 20px;
+  width: 161px;
+  margin: 0;
   color: #ffffff;
   text-align: center;
-  margin: 0;
-  padding: 187px 61px 43px 58px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
 
-  @media (min-width: @tablet-width) {
-    padding: 71px 125px 69px 421px;
-    text-align: start;
-    background-position: center left 78px, center, center;
+.present::before {
+  content: "";
+  display: block;
+  background-image: url("../img/present.svg");
+  width: 78px;
+  height: 80px;
+  background-size: 78px 80px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    width: auto;
+    background-size: 95% auto;
+    padding-top: 57px;
+    padding-bottom: 60px;
+    padding-left: 78px;
+    flex-direction: row;
+    margin-bottom: 75px;
   }
 
-  @media (min-width: @desktop-width) {
-    padding: 185px 40px 43px;
-    background-position: top 56px center, center, center;
+  .present__description {
+    text-align: start;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .present::before {
+    width: 80px;
+    height: 82px;
+    background-size: 80px 82px;
+    margin-bottom: 0;
+    margin-right: 264px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    flex-direction: column;
+    padding: 56px 42px 43px;
+
+    background-size: auto 100%;
+  }
+
+  .present::before {
+    margin: 0;
+    margin-bottom: 46px;
+  }
+
+  .present__description {
     text-align: center;
-    min-width: 241px;
   }
 }
