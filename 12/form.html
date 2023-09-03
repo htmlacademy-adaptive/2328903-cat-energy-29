@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cat Energy</title>
+  <link href="css/style.css" rel="stylesheet">
+  <base href="https://htmlacademy-adaptive.github.io/2328903-cat-energy-29/12/">
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo">
+      <img class="main-header__logo--img" src="img/logo.svg" width="33" height="38" alt="">
+      <img class="main-header__logo--caption" src="img/logo-caption.svg" width="101" height="18" alt="">
+      <span class="visually-hidden">Логотип магазина Cat Energy</span>
+    </a>
+    <nav class="main-nav main-nav--nojs">
+      <button class="main-nav__toggle  main-nav__toggle--closed" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <ul class="main-nav__list main-nav__list--closed">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <div class="form-container__lead">
+      <h1 class="form-container__title">Подбор программы</h1>
+      <p class="form-container__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    </div>
+    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="form__group form__group--info">
+        <legend class="visually-hidden">Данные о питомце</legend>
+        <ul class="form__list">
+          <li class="form__item">
+            <label class="form__label">
+              <span class="form__label-text">Имя:*</span>
+              <input class="form__input" type="text" name="name" value="Барсик" required>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label">
+              <span class="form__label-text">Вес (кг):*</span>
+              <input class="form__input" type="number" name="weight" value="7" min="1" max="99" required>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label">
+              <span class="form__label-text">Возраст (лет):</span>
+              <input class="form__input" type="number" name="age" value="7" min="1" max="99">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__group form__group--program">
+        <legend class="visually-hidden">Выбор программы</legend>
+        <ul class="form__list">
+          <li class="form__item">
+            <label class="form__label form__label--check">
+              <input class="form__check visually-hidden" type="radio" name="program" value="Weight loss" checked>
+              <span class="form__mark form__mark--radio"></span>
+              <span class="form__label-text">Похудение</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__label--check">
+              <input class="form__check visually-hidden" type="radio" name="program" value="Weight gain">
+              <span class="form__mark form__mark--radio"></span>
+              <span class="form__label-text">Набор массы</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__label--check">
+              <input class="form__check visually-hidden" type="radio" name="program" value="Don't know. Need help">
+              <span class="form__mark form__mark--radio"></span>
+              <span class="form__label-text">Не знаю (Нужен ваш совет)</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__group form__group--contacts">
+        <h2 class="form__title">
+          <span class="form__title-text">Контактные данные (владельца кота)</span>
+        </h2>
+        <ul class="form__list form__list--contacts">
+          <li class="form__item">
+            <label class="form__label">
+              <span class="form__label-text">E-mail:*</span>
+              <input class="form__input form__input--email" type="email" name="email" value="kuklachev@gmail.com"
+                required>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label">
+              <span class="form__label-text">Телефон:*</span>
+              <input class="form__input form__input--phone" type="tel" name="phone" value="8 (960) 900-60-90" required>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__group form__group--comment">
+        <h2 class="form__title">
+          <span class="form__title-text">Комментарий</span>
+        </h2>
+        <label class="visually-hidden" for="textarea">Ввести текст</label>
+        <textarea class="form__textarea" name="textarea" id="textarea">Расскажите обо всех повадках кота</textarea>
+      </fieldset>
+      <fieldset class="form__group form__group--extra">
+        <legend class="visually-hidden">Допольнительные товары</legend>
+        <h2 class="form__title form__title--extra">
+          <span class="form__title-text">Дополнительно</span>
+        </h2>
+        <ul class="form__list">
+          <li class="form__item">
+            <label class="form__label form__label--check">
+              <input class="form__check visually-hidden" type="checkbox" name="sweetener" checked>
+              <span class="form__mark form__mark--checkbox"></span>
+              <span>Cахарозаменитель</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__label--check">
+              <input class="form__check visually-hidden" type="checkbox" name="water">
+              <span class="form__mark form__mark--checkbox"></span>
+              <span>Питьевая вода</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__label--check">
+              <input class="form__check visually-hidden" type="checkbox" name="milk">
+              <span class="form__mark form__mark--checkbox"></span>
+              <span>Молоко</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label form__label--check">
+              <input class="form__check visually-hidden" type="checkbox" name="vitamins">
+              <span class="form__mark form__mark--checkbox"></span>
+              <span>Витамины</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="form__wrapper">
+        <button class="form__button button" type="submit">Отправить заявку</button>
+        <span class="form__footnote">* — Обязательные поля</span>
+      </div>
+    </form>
+
+    <section class="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="visually-hidden">Контакты магазина Cat Energy</h2>
+        <p class="contacts__lead">Приглашаем<br> к сотрудничеству дилеров!</p>
+        <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span
+            class="contacts__town">Санкт-Петербург</span></span>
+      </div>
+      <div class="contacts__map-wrapper">
+        <iframe class="contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197427!2d30.32047247608383!3d59.93871916209481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1692538449955!5m2!1sru!2s"
+          width="600" height="362" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <a class="main-footer__logo-link" href="#">
+        <img class="main-footer__logo-img" src="img/logo-caption.svg" width="128" height="24"
+          alt="Логотип магазина Cat Energy">
+      </a>
+      <ul class="main-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="#">
+            <span class="visually-hidden">Телеграмм</span>
+          </a>
+        </li>
+      </ul>
+      <a class="main-footer__academy" href="#">HTML Academy</a>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
