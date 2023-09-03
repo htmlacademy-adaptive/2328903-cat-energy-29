@@ -21,7 +21,7 @@
       </button>
       <ul class="main-nav__list main-nav__list--close">
         <li class="main-nav__item">
-          <a class="main-nav__link"  href="index.html">Главная</a>
+          <a class="main-nav__link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -44,19 +44,19 @@
         <ul class="form__list">
           <li class="form__item">
             <label class="form__label">
-              Имя:*
+              <span class="form__label-text">Имя:*</span>
               <input class="form__input" type="text" name="name" value="Барсик" required>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label">
-              Вес (кг):*
+              <span class="form__label-text">Вес (кг):*</span>
               <input class="form__input" type="number" name="weight" value="7" min="1" max="99" required>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label">
-              Возраст (лет):
+              <span class="form__label-text">Возраст (лет):</span>
               <input class="form__input" type="number" name="age" value="7" min="1" max="99">
             </label>
           </li>
@@ -69,51 +69,57 @@
             <label class="form__label form__label--check">
               <input class="form__check visually-hidden" type="radio" name="program" value="Weight loss" checked>
               <span class="form__mark form__mark--radio"></span>
-              <span>Похудение</span>
+              <span class="form__label-text">Похудение</span>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label form__label--check">
               <input class="form__check visually-hidden" type="radio" name="program" value="Weight gain">
               <span class="form__mark form__mark--radio"></span>
-              <span>Набор массы</span>
+              <span class="form__label-text">Набор массы</span>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label form__label--check">
               <input class="form__check visually-hidden" type="radio" name="program" value="Don't know. Need help">
               <span class="form__mark form__mark--radio"></span>
-              <span>Не знаю (Нужен ваш совет)</span>
+              <span class="form__label-text">Не знаю (Нужен ваш совет)</span>
             </label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__group form__group--contacts">
-        <legend class="form__title">Контактные данные (владельца кота)</legend>
-        <ul class="form__list">
+        <h2 class="form__title">
+          <span class="form__title-text">Контактные данные (владельца кота)</span>
+        </h2>
+        <ul class="form__list form__list--contacts">
           <li class="form__item">
             <label class="form__label">
-              E-mail:*
+              <span class="form__label-text">E-mail:*</span>
               <input class="form__input form__input--email" type="email" name="email" value="kuklachev@gmail.com"
                 required>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label">
-              Телефон:*
+              <span class="form__label-text">Телефон:*</span>
               <input class="form__input form__input--phone" type="tel" name="phone" value="8 (960) 900-60-90" required>
             </label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__group form__group--comment">
-        <legend class="form__title">Комментарий</legend>
+        <h2 class="form__title">
+          <span class="form__title-text">Комментарий</span>
+        </h2>
         <label class="visually-hidden" for="textarea">Ввести текст</label>
         <textarea class="form__textarea" name="textarea" id="textarea">Расскажите обо всех повадках кота</textarea>
       </fieldset>
       <fieldset class="form__group form__group--extra">
         <legend class="visually-hidden">Допольнительные товары</legend>
-        <h2 class="form__title">Дополнительно</h2>
+        <h2 class="form__title form__title--extra">
+          <span class="form__title-text">Дополнительно</span>
+        </h2>
         <ul class="form__list">
           <li class="form__item">
             <label class="form__label form__label--check">
