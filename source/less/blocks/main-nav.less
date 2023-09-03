@@ -1,6 +1,28 @@
 .main-nav {
-  padding: 7px 0;
+  padding: 7px 20px;
   display: flex;
+
+  @media (max-width: @mobile-width-only) {
+    &--nojs {
+      padding: 0;
+      width: 100%;
+
+      .main-nav__toggle {
+        display: none;
+      }
+
+      .main-nav__list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        z-index: 1;
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -8,6 +30,7 @@
 }
 
 .main-nav__toggle {
+  cursor: pointer;
   padding: 12px;
   background-image: url("../img/toggle.svg");
   background-repeat: no-repeat;
@@ -15,36 +38,43 @@
   background-position: center;
   border: none;
 
+  &--opened {
+    background-image: url("../img/toggle-close.svg");
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
 .main-nav__list {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  align-items: center;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  z-index: 1;
 
-  @media (max-width: @tablet-width) {
-    &--close {
+  @media (max-width: @mobile-width-only) {
+    &--opened {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      z-index: 1;
+    }
+
+    &--closed {
       display: none;
     }
   }
 
   @media (min-width: @tablet-width) {
-    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
     gap: 33px;
     z-index: 0;
   }
@@ -58,6 +88,29 @@
 .main-nav__item {
   padding-top: 22px;
   padding-bottom: 24px;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #e6e6e6;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:last-child::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #e6e6e6;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 14px 0 12px;
