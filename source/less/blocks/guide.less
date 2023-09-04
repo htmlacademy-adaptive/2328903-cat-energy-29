@@ -9,20 +9,28 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 110px 69px;
+    border: none;
   }
 }
 
 .guide__title {
   font-family: "Oswald", serif;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 36px;
   font-weight: 400;
   color: #000000;
   margin: 0;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
     margin-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
@@ -31,7 +39,6 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
   row-gap: 20px;
 
   @media (min-width: @tablet-width) {

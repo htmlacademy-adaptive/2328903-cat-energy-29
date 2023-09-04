@@ -128,12 +128,10 @@
   font-size: 12px;
   line-height: 16px;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
     font-size: 16px;
     line-height: 20px;
     row-gap: 7px;
@@ -144,7 +142,10 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 4px;
-  border-bottom: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .cards__cost {
