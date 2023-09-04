@@ -15,11 +15,11 @@
       <img class="main-header__logo--caption" src="img/logo-caption.svg" width="101" height="18" alt="">
       <span class="visually-hidden">Логотип магазина Cat Energy</span>
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+    <nav class="main-nav main-nav--nojs">
+      <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <ul class="main-nav__list main-nav__list--close">
+      <ul class="main-nav__list main-nav__list--closed">
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--index main-nav__link--current" href="index.html">Главная</a>
         </li>
@@ -39,7 +39,7 @@
 
     <section class="promo">
       <div class="promo__wrapper">
-        <h2 class="promo__title">Функциональное
+        <h2 class="promo__title">Функциональное<br>
           питание для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <img class="promo__img" src="img/promo-сup.png" width="280" height="270" alt="Кошачья еда со вкусом курицы">
@@ -70,11 +70,13 @@
         <h2 class="guide__title">Как это работает</h2>
         <ul class="guide__list">
           <li class="guide__item guide__item--leaf">
-            <span class="guide__description">Функциональное питание содержит только полезные питательные вещества.</span>
+            <span class="guide__description">Функциональное питание содержит только полезные питательные
+              вещества.</span>
             <span class="guide__count">1</span>
           </li>
           <li class="guide__item guide__item--water">
-            <span class="guide__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span>
+            <span class="guide__description">Выпускается в виде порошка, который нужно лишь залить кипятком и
+              готово.</span>
             <span class="guide__count">2</span>
           </li>
           <li class="guide__item guide__item--food">
@@ -105,7 +107,7 @@
             <dt class="example__count">60 дней</dt>
             <dd class="example__choise">Затрачено времени</dd>
           </dl>
-          <p class="example__price">Затраты на питание: 15 000 РУБ.</p>
+          <p class="example__price">Затраты на питание: <span class="example__price-count">15 000 РУБ.</span></p>
         </div>
         <img class="example__img" src="img/slider.png" width="280" height="256" alt="Пример похудения кота">
       </div>
@@ -115,7 +117,13 @@
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты магазина Cat Energy</h2>
         <p class="contacts__lead">Приглашаем<br> к сотрудничеству дилеров!</p>
-        <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
+        <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span
+            class="contacts__town">Санкт-Петербург</span></span>
+      </div>
+      <div class="contacts__map-wrapper">
+        <iframe class="contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197427!2d30.32047247608383!3d59.93871916209481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1692538449955!5m2!1sru!2s"
+          width="600" height="362" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
 
@@ -147,6 +155,7 @@
       <a class="main-footer__academy" href="#">HTML Academy</a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

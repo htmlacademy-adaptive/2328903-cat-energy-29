@@ -33,18 +33,22 @@
 
 .example__title {
   font-family: "Oswald", serif;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 36px;
   font-weight: 400;
   color: #000000;
   margin: 0;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
     margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
     margin-bottom: 146px;
   }
 }
@@ -76,9 +80,10 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 179px 179px 1fr;
+    grid-template-columns: 162px 162px auto;
     margin-bottom: 104px;
     gap: 43px;
+    justify-content: stretch;
   }
 
   @media (min-width: @desktop-width) {
@@ -90,11 +95,10 @@
 }
 
 .example__numbers {
-  position: relative;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   margin: 0;
-  padding: 13px 0 17px;
+  padding-top: 13px;
 
   @media (min-width: @tablet-width) {
     padding: 14px 0 19px;
@@ -115,17 +119,15 @@
 }
 
 .example__choise {
-  position: absolute;
+  width: 77px;
+  text-align: center;
   font-size: 12px;
   line-height: 12px;
   text-transform: lowercase;
-  margin-inline-start: 0;
-  margin: 0;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: -10px;
   padding: 0 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -14px;
-  z-index: 1;
   background-color: #eaeaea;
 
   @media (min-width: @tablet-width) {
@@ -160,10 +162,22 @@
 
   @media (min-width: @desktop-width) {
     grid-column: ~"1 / -1";
-    text-align: start;
+    padding: 0;
+    display: flex;
   }
 }
 
+.example__price-count {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 63px;
+  }
+}
 
 .example__img {
   display: block;

@@ -3,25 +3,34 @@
   padding: 20px 20px 49px;
 
   @media (min-width: @tablet-width) {
-    padding: 45px 105px 47px 30px;
+    padding: 45px 105px 46px 30px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px 69px;
+    border: none;
   }
 }
 
 .guide__title {
   font-family: "Oswald", serif;
   font-size: 36px;
-  line-height: 40px;
+  line-height: 36px;
   font-weight: 400;
   color: #000000;
   margin: 0;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
     margin-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
@@ -30,7 +39,6 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
   row-gap: 20px;
 
   @media (min-width: @tablet-width) {

@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 13px;
-  padding: 11px 0 14px;
+  padding: 11px 20px 19px;
+  border-bottom: 1px solid #ebebeb;
   align-items: center;
   justify-items: center;
 
@@ -127,13 +128,23 @@
   font-size: 12px;
   line-height: 16px;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
-    row-gap: 12px;
+    row-gap: 7px;
+  }
+}
+
+.cards__description-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 

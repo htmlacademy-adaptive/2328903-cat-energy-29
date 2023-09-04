@@ -15,13 +15,13 @@
       <img class="main-header__logo--caption" src="img/logo-caption.svg" width="101" height="18" alt="">
       <span class="visually-hidden">Логотип магазина Cat Energy</span>
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+    <nav class="main-nav main-nav--nojs">
+      <button class="main-nav__toggle  main-nav__toggle--closed" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
       </button>
-      <ul class="main-nav__list main-nav__list--close">
+      <ul class="main-nav__list main-nav__list--closed">
         <li class="main-nav__item">
-          <a class="main-nav__link"  href="index.html">Главная</a>
+          <a class="main-nav__link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -44,19 +44,19 @@
         <ul class="form__list">
           <li class="form__item">
             <label class="form__label">
-              Имя:*
+              <span class="form__label-text">Имя:*</span>
               <input class="form__input" type="text" name="name" value="Барсик" required>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label">
-              Вес (кг):*
+              <span class="form__label-text">Вес (кг):*</span>
               <input class="form__input" type="number" name="weight" value="7" min="1" max="99" required>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label">
-              Возраст (лет):
+              <span class="form__label-text">Возраст (лет):</span>
               <input class="form__input" type="number" name="age" value="7" min="1" max="99">
             </label>
           </li>
@@ -69,51 +69,59 @@
             <label class="form__label form__label--check">
               <input class="form__check visually-hidden" type="radio" name="program" value="Weight loss" checked>
               <span class="form__mark form__mark--radio"></span>
-              <span>Похудение</span>
+              <span class="form__label-text">Похудение</span>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label form__label--check">
               <input class="form__check visually-hidden" type="radio" name="program" value="Weight gain">
               <span class="form__mark form__mark--radio"></span>
-              <span>Набор массы</span>
+              <span class="form__label-text">Набор массы</span>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label form__label--check">
               <input class="form__check visually-hidden" type="radio" name="program" value="Don't know. Need help">
               <span class="form__mark form__mark--radio"></span>
-              <span>Не знаю (Нужен ваш совет)</span>
+              <span class="form__label-text">Не знаю (Нужен ваш совет)</span>
             </label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__group form__group--contacts">
-        <legend class="form__title">Контактные данные (владельца кота)</legend>
-        <ul class="form__list">
+        <h2 class="form__title">
+          <span class="form__title-text">Контактные данные (владельца кота)</span>
+        </h2>
+        <ul class="form__list form__list--contacts">
           <li class="form__item">
             <label class="form__label">
-              E-mail:*
+              <span class="form__label-text">E-mail:*</span>
               <input class="form__input form__input--email" type="email" name="email" value="kuklachev@gmail.com"
                 required>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label">
-              Телефон:*
+              <span class="form__label-text">Телефон:*</span>
               <input class="form__input form__input--phone" type="tel" name="phone" value="8 (960) 900-60-90" required>
             </label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__group form__group--comment">
-        <legend class="form__title">Комментарий</legend>
+        <h2 class="form__title">
+          <span class="form__title-text">Комментарий</span>
+        </h2>
         <label class="visually-hidden" for="textarea">Ввести текст</label>
-        <textarea class="form__textarea" name="textarea" id="textarea">Расскажите обо всех повадках кота</textarea>
+        <label class="form__label">
+          <textarea class="form__textarea" name="textarea" id="textarea">Расскажите обо всех повадках кота</textarea>
+        </label>
       </fieldset>
       <fieldset class="form__group form__group--extra">
         <legend class="visually-hidden">Допольнительные товары</legend>
-        <h2 class="form__title">Дополнительно</h2>
+        <h2 class="form__title form__title--extra">
+          <span class="form__title-text">Дополнительно</span>
+        </h2>
         <ul class="form__list">
           <li class="form__item">
             <label class="form__label form__label--check">
@@ -151,11 +159,17 @@
       </div>
     </form>
 
-    <section class="contacts contacts--catalog">
+    <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты магазина Cat Energy</h2>
         <p class="contacts__lead">Приглашаем<br> к сотрудничеству дилеров!</p>
-        <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
+        <span class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span
+            class="contacts__town">Санкт-Петербург</span></span>
+      </div>
+      <div class="contacts__map-wrapper">
+        <iframe class="contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197427!2d30.32047247608383!3d59.93871916209481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1692538449955!5m2!1sru!2s"
+          width="600" height="362" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
 
@@ -187,6 +201,7 @@
       <a class="main-footer__academy" href="#">HTML Academy</a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
