@@ -1,16 +1,24 @@
 .present {
-  width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../img/present-main.png");
+  background-image: url("../img/catalog/gift-background-picture@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 60px;
   padding-bottom: 43px;
-  margin: auto;
   margin-bottom: 28px;
+}
+
+@media (min-resolution: 2dppx) {
+  .present {
+    background-image: url("../img/catalog/gift-background-picture@2x.png");
+  }
+}
+
+.present-wrapper {
+  padding: 0 20px;
 }
 
 .present__description {
@@ -28,7 +36,7 @@
 .present::before {
   content: "";
   display: block;
-  background-image: url("../img/present.svg");
+  background-image: url("../img/catalog/present.svg");
   width: 78px;
   height: 80px;
   background-size: 78px 80px;
@@ -37,36 +45,58 @@
 
 @media (min-width: @tablet-width) {
   .present {
-    width: auto;
-    background-size: 95% auto;
-    padding-top: 57px;
-    padding-bottom: 60px;
+    position: relative;
+    background-image: url("../img/catalog/gift-background-picture-tablet@1x.png");
+    width: 100%;
+    min-height: 200px;
+    margin: 0 auto;
+    padding-top: 97px;
+    padding-bottom: 100px;
     padding-left: 78px;
-    flex-direction: row;
+
     margin-bottom: 5px;
+
+    @media (min-width: 768px) and (min-resolution: 2dppx) {
+      .present {
+        background-image: url("../img/catalog/gift-background-picture-tablet@2x.png");
+      }
+    }
   }
 
   .present__description {
     text-align: start;
     font-size: 16px;
     line-height: 20px;
+    margin-left: auto;
+    margin-right: 125px;
   }
 
   .present::before {
+    position: absolute;
     width: 80px;
     height: 82px;
     background-size: 80px 82px;
     margin-bottom: 0;
-    margin-right: 264px;
+    right: auto;
+    left: 77px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .present {
+    max-width: 244px;
+    min-height: 288px;
     flex-direction: column;
     padding: 56px 42px 43px;
     margin-bottom: 0;
     background-size: auto 100%;
+    background-image: url("../img/catalog/gift-background-picture@1x.png");
+
+    @media (min-width: 1300px) and (min-resolution: 2dppx) {
+      .present {
+        background-image: url("../img/catalog/gift-background-picture@2x.png");
+      }
+    }
   }
 
   .present::before {
@@ -76,5 +106,6 @@
 
   .present__description {
     text-align: center;
+    margin-top: 140px;
   }
 }

@@ -8,9 +8,7 @@
   justify-items: center;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 60px;
-    row-gap: 0;
+    display: block;
     padding: 10px 37px 40px;
     background-image: linear-gradient(to top, #f2f2f2 84%, #ffffff 16%);
   }
@@ -69,17 +67,20 @@
 }
 
 .cards__image {
+  margin: auto;
   display: block;
 
   @media (min-width: @tablet-width) {
     grid-column: span 2;
-    width: 200px;
-    height: 210px;
     margin-bottom: 22px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 12px;
+  }
+
+  &--mini {
+    margin-bottom: 35px;
   }
 }
 
