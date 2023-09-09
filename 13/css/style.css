@@ -370,17 +370,24 @@ a {
 }
 @media (min-width: 768px) {
   .example__choise {
+    padding: 0;
+    width: 139px;
     font-size: 14px;
     line-height: 14px;
+    margin-bottom: -24px;
     background-color: #ffffff;
-    bottom: -5px;
-    white-space: nowrap;
-    max-width: 152px;
+  }
+  .example__choise--mini {
+    width: 125px;
   }
 }
 @media (min-width: 1440px) {
   .example__choise {
     background-color: #eaeaea;
+    width: 160px;
+  }
+  .example__choise--mini {
+    width: 108px;
   }
 }
 .example__price {
