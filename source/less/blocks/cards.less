@@ -18,10 +18,9 @@
   }
 
   &--more {
+    position: relative;
     padding-top: 70px;
-    background-image: url("../img/plus.svg");
-    background-repeat: no-repeat;
-    background-position: top 17px center;
+    background-image: none;
     row-gap: 0;
 
     .cards__title {
@@ -62,6 +61,26 @@
       @media (min-width: @desktop-width) {
         padding: 10px 35px;
       }
+    }
+  }
+}
+
+.cards__item-container {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    background: #ffffff url("../img/sprite.svg#plus") no-repeat center;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      height: 60px;
+      top: 50px;
     }
   }
 }
@@ -128,7 +147,7 @@
 .cards__description {
   font-size: 12px;
   line-height: 16px;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 

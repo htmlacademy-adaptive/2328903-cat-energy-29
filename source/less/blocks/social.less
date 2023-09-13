@@ -10,19 +10,32 @@
 
 .social__link {
   display: inline-block;
+  mask-image: url("../img/sprite.svg#social__link-vk");
+  background-color: #666666;
+  width: 30px;
+  height: 30px;
   padding: 11px 14px;
   background-repeat: no-repeat;
   background-position: center;
 
-  &--vk {
-    background-image: url("../img/vk.svg");
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:focus {
+    background-color: #68b738;
+  }
+
+  &:active {
+    background-color: #68b738;
+    opacity: 0.6;
   }
 
   &--youtube {
-    background-image: url("../img/youtube.svg");
+    mask-image: url("../img/sprite.svg#social__link-youtube");
   }
 
   &--telegram {
-    background-image: url("../img/telegram.svg");
+    mask-image: url("../img/sprite.svg#social__link-telegram");
   }
 }
