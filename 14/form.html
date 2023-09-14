@@ -103,16 +103,27 @@
         </h2>
         <ul class="form__list form__list--contacts">
           <li class="form__item">
-            <label class="form__label">
+            <label class="form__label form__label--email" for="email-user">
               <span class="form__label-text">E-mail:*</span>
-              <input class="form__input form__input--email" type="email" name="email" placeholder="kuklachev@gmail.com"
-                required>
+              <span class="form__lebel-wrapper">
+                <input class="form__input" type="email" name="email" id="email-user" placeholder="kuklachev@gmail.com"
+                  required>
+                <svg width="21" height="20">
+                  <use xlink:href="img/sprite.svg#icon__email"></use>
+                </svg>
+              </span>
             </label>
           </li>
           <li class="form__item">
-            <label class="form__label">
+            <label class="form__label form__label--phone" for="phone-user">
               <span class="form__label-text">Телефон:*</span>
-              <input class="form__input form__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <span class="form__lebel-wrapper">
+                <input class="form__input" type="tel" name="phone" id="phone-user" placeholder="8 (960) 900-60-90"
+                  required>
+                <svg width="21" height="20">
+                  <use xlink:href="img/sprite.svg#icon__phone"></use>
+                </svg>
+              </span>
             </label>
           </li>
         </ul>
@@ -207,7 +218,10 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer__academy" href="#">HTML Academy</a>
+      <a class="main-footer__academy" href="#">
+        <span class="main-footer__academy-text">HTML Academy</span>
+        <span class="main-footer__academy-img"></span>
+      </a>
     </div>
   </footer>
   <script src="js/script.js"></script>
