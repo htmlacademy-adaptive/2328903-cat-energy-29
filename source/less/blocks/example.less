@@ -18,10 +18,10 @@
 
 .example__wrapper {
   margin: 0 auto;
-  padding: 25px 20px 40px;
+  padding: 28px 20px 40px;
 
   @media (min-width: @tablet-width) {
-    padding: 45px 30px 101px;
+    padding: 46px 30px 101px;
     position: relative;
     z-index: 1;
   }
@@ -89,7 +89,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: 179px 179px 1fr;
     margin-bottom: 0;
-    column-gap: 42px;
+    column-gap: 25px;
     row-gap: 60px;
   }
 }
@@ -101,7 +101,11 @@
   padding-top: 13px;
 
   @media (min-width: @tablet-width) {
-    padding: 14px 0 19px;
+    padding: 16px 0 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 162px;
   }
 }
 
@@ -125,8 +129,8 @@
   line-height: 12px;
   text-transform: lowercase;
   margin: 0 auto;
-  margin-top: 8px;
-  margin-bottom: -10px;
+  margin-top: 10px;
+  margin-bottom: -17px;
   padding: 0 8px;
   background-color: #eaeaea;
 
@@ -192,14 +196,65 @@
   display: block;
   margin: 0 auto;
 
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 110px;
+    top: 0;
+  }
+}
+
+.example__range-bar {
+  position: absolute;
+  width: 4px;
+  height: 256px;
+  bottom: 40px;
+  left: 50%;
+  top: 1930px;
+  background-color: #666666;
+  border-radius: 2px;
+
   @media (min-width: @tablet-width) {
-    width: 560px;
+    top: 469px;
     height: 512px;
+    bottom: 101px;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    right: 109px;
-    bottom: 82px;
+    bottom: auto;
+    left: auto;
+    right: 388px;
+    top: 0;
+  }
+
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
+
+&:hover {
+  & .example__range-toggle svg {
+    --toggle-color: #68b738;
+  }
+}
+
+.example__range-toggle {
+  background-color: transparent;
+  position: absolute;
+  padding: 0;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  svg {
+    --toggle-color: #666666;
+  }
+}
+

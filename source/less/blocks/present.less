@@ -8,7 +8,7 @@
   background-position: center;
   padding-top: 60px;
   padding-bottom: 43px;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 @media (min-resolution: 2dppx) {
@@ -19,6 +19,10 @@
 
 .present-wrapper {
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
 }
 
 .present__description {
@@ -50,8 +54,8 @@
     width: 100%;
     min-height: 200px;
     margin: 0 auto;
-    padding-top: 97px;
-    padding-bottom: 100px;
+    padding-top: 71px;
+    padding-bottom: 44px;
     padding-left: 78px;
 
     margin-bottom: 5px;
@@ -68,7 +72,7 @@
     font-size: 16px;
     line-height: 20px;
     margin-left: auto;
-    margin-right: 125px;
+    margin-right: 124px;
   }
 
   .present::before {
@@ -78,7 +82,8 @@
     background-size: 80px 82px;
     margin-bottom: 0;
     right: auto;
-    left: 85px;
+    left: 79px;
+    top: 59px;
   }
 }
 

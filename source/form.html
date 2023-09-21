@@ -54,19 +54,19 @@
           <li class="form__item">
             <label class="form__label">
               <span class="form__label-text">Имя:*</span>
-              <input class="form__input" type="text" name="name" placeholder="Барсик" required>
+              <input class="form__input" type="text" name="name" value="Барсик" required>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label">
               <span class="form__label-text">Вес (кг):*</span>
-              <input class="form__input" type="number" name="weight" placeholder="7" min="1" max="99" required>
+              <input class="form__input" type="number" name="weight" value="7" min="1" max="99" required>
             </label>
           </li>
           <li class="form__item">
             <label class="form__label">
               <span class="form__label-text">Возраст (лет):</span>
-              <input class="form__input" type="number" name="age" placeholder="7" min="1" max="99">
+              <input class="form__input" type="number" name="age" value="7" min="1" max="99">
             </label>
           </li>
         </ul>
@@ -106,7 +106,7 @@
             <label class="form__label form__label--email" for="email-user">
               <span class="form__label-text">E-mail:*</span>
               <span class="form__label-wrapper">
-                <input class="form__input" type="email" name="email" id="email-user" placeholder="kuklachev@gmail.com"
+                <input class="form__input" type="email" name="email" id="email-user" value="kuklachev@gmail.com"
                   required>
                 <svg width="21" height="20">
                   <use xlink:href="img/sprite.svg#icon__email"></use>
@@ -118,7 +118,7 @@
             <label class="form__label form__label--phone" for="phone-user">
               <span class="form__label-text">Телефон:*</span>
               <span class="form__label-wrapper">
-                <input class="form__input" type="tel" name="phone" id="phone-user" placeholder="8 (960) 900-60-90"
+                <input class="form__input" type="tel" name="phone" id="phone-user" value="8 (960) 900-60-90"
                   required>
                 <svg width="21" height="20">
                   <use xlink:href="img/sprite.svg#icon__phone"></use>
@@ -133,12 +133,12 @@
           <span class="form__title-text">Комментарий</span>
         </h2>
         <label class="visually-hidden" for="textarea">Ввести текст</label>
-        <label class="form__label">
+        <div class="form__label">
           <textarea class="form__textarea" name="textarea" id="textarea">Расскажите обо всех повадках кота</textarea>
-        </label>
+        </div>
       </fieldset>
       <fieldset class="form__group form__group--extra">
-        <legend class="visually-hidden">Допольнительные товары</legend>
+        <legend class="visually-hidden">Дополнительные товары</legend>
         <h2 class="form__title form__title--extra">
           <span class="form__title-text">Дополнительно</span>
         </h2>
@@ -147,7 +147,7 @@
             <label class="form__label form__label--check">
               <input class="form__check visually-hidden" type="checkbox" name="sweetener" checked>
               <span class="form__mark form__mark--checkbox"></span>
-              <span>Cахарозаменитель</span>
+              <span>Сахарозаменитель</span>
             </label>
           </li>
           <li class="form__item">
@@ -218,7 +218,7 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer__academy" href="#">
+      <a class="main-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="main-footer__academy-text">HTML Academy</span>
         <span class="main-footer__academy-img"></span>
       </a>
