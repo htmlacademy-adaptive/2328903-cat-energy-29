@@ -1,5 +1,5 @@
 .products__wrapper {
-  padding: 8px 0 11px;
+  padding: 3px 0 11px;
   background-color: #ffffff;
 
   @media (min-width: @tablet-width) {
@@ -8,24 +8,26 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 110px;
-    padding-bottom: 58px;
+    padding-bottom: 67px;
   }
 }
 
 .products__list {
   display: grid;
   list-style-type: none;
-  gap: 19px;
+  gap: 10px;
   margin: 0;
   padding: 0;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
+    row-gap: 64px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
+    row-gap: 76px;
   }
 }
